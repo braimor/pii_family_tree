@@ -46,7 +46,7 @@ namespace Program
             VisitorAge totalAge = new VisitorAge();
             totalAge.Visit(n1);
             Console.WriteLine($"Age: {totalAge.Content()}");
-            
+
             VisitorElder elder = new VisitorElder();
             elder.Visit(n1);
             Console.WriteLine($"Elder children: {elder.Content()}");
