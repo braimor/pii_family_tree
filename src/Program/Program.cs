@@ -25,7 +25,7 @@ namespace Program
             Person p6 = new Person("Brian6", 6);
             Node n6 = new Node(6, p6);
             
-            Person p7 = new Person("Brian7", 7);
+            Person p7 = new Person("Brian77", 7);
             Node n7 = new Node(7, p7);
             
             Person p8 = new Person("Brian8", 8);
@@ -46,6 +46,14 @@ namespace Program
             VisitorAge totalAge = new VisitorAge();
             totalAge.Visit(n1);
             Console.WriteLine($"Age: {totalAge.Content()}");
+            
+            VisitorElder elder = new VisitorElder();
+            elder.Visit(n1);
+            Console.WriteLine($"Elder children: {elder.Content()}");
+            
+            VisitorLargerName larger_name = new VisitorLargerName();
+            larger_name.Visit(n1);
+            Console.WriteLine($"Larger name: {larger_name.Content()}");
         }
     }
 }
